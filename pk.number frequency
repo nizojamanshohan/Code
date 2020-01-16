@@ -1,0 +1,22 @@
+#include <stdio.h>
+b[1000]= {0};
+int main()
+{
+    int n,i,a[100],l[1000]= {0},j;
+    scanf("%d",&n);
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+        b[a[i]]++;
+    }
+    for(i=0; i<n; i++)
+    {
+        if(l[a[i]]<=0)
+            printf("%d=%d\n",a[i],b[a[i]]);
+        l[a[i]]++;
+
+    }
+
+
+    return 0;
+}
