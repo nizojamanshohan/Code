@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int a,c=1,d,b=0;
+    scanf("%d",&a);
+    d=a;
+    if(a%4==0||a%7==0)
+        printf("YES");
+
+    else
+    {
+        c=0;
+        while(d!=0)
+        {
+            if(d%10==4||d%10==7)
+            {
+                c++;
+            }
+            d=d/10;
+            b++;
+        }
+    }
+
+    if(c==b)
+        printf("YES");
+    else if(a%4!=0&&a%7!=0)
+        printf("NO");
+
+    return 0;
+}
